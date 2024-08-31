@@ -115,6 +115,9 @@ proxy-groups:
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     name: AUTO
     type: url-test
+    proxies:
+      - Proxy1
+      - Proxy2
     interval: 300
   - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
     name: AIGC
@@ -145,6 +148,9 @@ proxy-groups:
     filter: (?i)香港|Hong Kong|HK|🇭🇰
     name: HK AUTO
     type: url-test
+    proxies:
+      - Proxy1
+      - Proxy2
     interval: 300
   - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
     include-all: true
@@ -152,6 +158,9 @@ proxy-groups:
     filter: (?i)新加坡|Singapore|🇸🇬
     name: SG AUTO
     type: url-test
+    proxies:
+      - Proxy1
+      - Proxy2
     interval: 300
   - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
     include-all: true
@@ -159,6 +168,9 @@ proxy-groups:
     filter: (?i)日本|Japan|🇯🇵
     name: JP AUTO
     type: url-test
+    proxies:
+      - Proxy1
+      - Proxy2
     interval: 300
   - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
     include-all: true
@@ -166,6 +178,9 @@ proxy-groups:
     filter: (?i)美国|USA|🇺🇸
     name: US AUTO
     type: url-test
+    proxies:
+      - Proxy1
+      - Proxy2
     interval: 300
   - icon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
     include-all: true
@@ -181,17 +196,10 @@ proxy-groups:
 
 rules:
   - "RULE-SET,private,DIRECT"
-  - "RULE-SET,bing,AIGC"
-  - "RULE-SET,copilot,AIGC"
-  - "RULE-SET,bard,AIGC"
-  - "RULE-SET,openai,AIGC"
-  - "RULE-SET,claude,AIGC"
-  - "RULE-SET,steam,PROXY"
+  - "RULE-SET,cn_domain,DIRECT"
+  - "RULE-SET,cn_ip,DIRECT"
   - "RULE-SET,telegram_domain,Telegram"
   - "RULE-SET,telegram_ip,Telegram"
   - "RULE-SET,google_domain,Google"
   - "RULE-SET,google_ip,Google"
   - "RULE-SET,geolocation-!cn,PROXY"
-  - "RULE-SET,cn_domain,DIRECT"
-  - "RULE-SET,cn_ip,DIRECT"
-  - "MATCH,PROXY"
